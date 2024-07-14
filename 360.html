@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Calculator</h1>
+    <label for="num1">Number 1:</label>
+    <input type="number" id="num1" name="num1"><br>
+    <label for="num2">Number 2:</label>
+    <input type="number" id="num2" name="num2"><br>
+    <button onclick="calculate()">Calculate Sum</button>
+    <h2 id="result"></h2>
+
+    <script>
+        function calculate() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            var sum = num1 + num2;
+            document.getElementById('result').innerText = "Result: " + sum;
+        }
+    </script>
+</body>
+</html>
